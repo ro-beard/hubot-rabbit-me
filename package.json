@@ -1,18 +1,27 @@
 {
   "name": "hubot-rabbit",
   "description": "A hubot script that shows up rabbit gifs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Robert Rosenberger",
     "email": "robert.rosenberger1988@googlemail.com"
   },
+  "license": "MIT",
   "keywords": [
     "hubot",
     "hubot-scripts"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ro-beard/hubot-rabbit-me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ro-beard/hubot-rabbit-me/issues"
+  },
   "dependencies": {
     "cheerio" : "0.22.0"
   },
+  "homepage": "https://github.com/ro-beard/hubot-rabbit-me",
   "devDependencies": {
     "hubot": "2.x",
     "grunt-release": "~0.6.0",
