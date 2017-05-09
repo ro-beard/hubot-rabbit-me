@@ -20,11 +20,16 @@ module.exports = (robot) ->
     robot.http("https://giphy.com/search/rabbit")
       .get() (err, res, body) ->
         $ = cheerio.load body
-        length = $('img').length;
-        random = Math.floor((Math.random() * length) + 1)
-        $('img').each (i, elem) ->
-          if i == random
-            src = $(this).attr('src')
-            gifSrc = src.replace '200_s', 'giphy'
-            msg.send gifSrc
-        msg.send 'Rabbit'
+        images = $('img');
+        picture = getRandomPicture(images)
+        while !picture.contains('200_s')
+            picture = getRandomPicture(images)
+        msg.send picture.replace '200_s', 'giphy'
+
+
+getRandomPicture = (images) ->
+  random = Math.floor((Math.random() * images.length) + 1)
+  images.each (i, elem) ->
+    if i == random
+      return $(this).attr('src')
+
