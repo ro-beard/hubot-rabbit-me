@@ -1,4 +1,4 @@
-# hubot-shipit
+# hubot-rabbit-me
 
 A hubot script that provides easy access to the rabbit-gifs.
 
