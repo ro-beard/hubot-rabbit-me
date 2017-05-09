@@ -21,15 +21,23 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         $ = cheerio.load body
         images = $('img');
-        picture = getRandomPicture(images)
-        while !picture.contains('200_s')
-            picture = getRandomPicture(images)
+        picture = getRandomPicture($, images)
+        maxTries = 5
+        while maxTries > 0 and picture and !picture.indexOf('200_s') > 0
+          picture = getRandomPicture($, images)
+          maxTries--
         msg.send picture.replace '200_s', 'giphy'
 
 
-getRandomPicture = (images) ->
-  random = Math.floor((Math.random() * images.length) + 1)
-  images.each (i, elem) ->
+getRandomPicture = ($, images) ->
+  random = undefined
+  returnVal = undefined
+  random = Math.floor(Math.random() * images.length + 1)
+  returnVal = ''
+  images.each((i, elem) ->
     if i == random
-      return $(this).attr('src')
+      returnVal = $(this).attr('src')
+    return
+  )
+  returnVal
 
