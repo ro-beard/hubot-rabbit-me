@@ -8,7 +8,7 @@ See [`src/rabbit-me.coffee`](src/rabbit-me.coffee) for full documentation.
 
 In hubot project repo, run:
 
-`npm install hubot-rabbit-me --save`
+`npm install hubot-rabbit --save`
 
 Then add **hubot-rabbit-me** to your `external-scripts.json`:
 
