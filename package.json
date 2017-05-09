@@ -1,7 +1,7 @@
 {
   "name": "hubot-rabbit",
   "description": "A hubot script that shows up rabbit gifs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Robert Rosenberger",
     "email": "robert.rosenberger1988@googlemail.com"
