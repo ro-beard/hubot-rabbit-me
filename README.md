@@ -14,7 +14,7 @@ Then add **hubot-rabbit-me** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-rabbit-me"
+  "hubot-rabbit"
 ]
 ```
 

@@ -13,7 +13,6 @@
 API_KEY = '279d30c866ad4f4f99d99c037a3b1f9d'
 SEARCH = 'rabbit'
 MAX_OFFSET = 1000
-cheerio = require('cheerio')
 
 module.exports = (robot) ->
   robot.hear /(^|.*\s)rabbit-me(\s.*|$)/gi, (msg) ->
